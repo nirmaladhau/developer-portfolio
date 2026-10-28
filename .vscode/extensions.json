@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "github.copilot",
+    "github.copilot-chat",
+    "continue.continue",
+    "codeium.codeium",
+    "ritwickdey.liveserver",
+    "esbenp.prettier-vscode"
+  ]
+}
