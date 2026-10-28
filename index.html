@@ -3,41 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Developer Portfolio - Software Engineer & Full-Stack Developer">
-  <title>Nirmal Adhau | Developer Portfolio</title>
+  <meta name="description" content="Nirmal Adhau | Tactical Cyber & Developer Portfolio">
+  <title>Nirmal Adhau | Code Vanguard & Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="warzone-theme">
+  <!-- Interactive Warzone Canvas Background (Battle Embers, Tracer Lasers & Horizon Flashes) -->
+  <canvas id="war-canvas"></canvas>
+
+  <!-- Ambient CRT Scanline Overlay -->
+  <div class="crt-overlay"></div>
+
   <!-- Navigation Bar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-brand">
-        <span class="brand-bracket">&lt;</span><span class="brand-name">Nirmal</span><span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+        <span class="hud-bracket">[</span>
+        <span class="brand-code">DEFCON-1</span>
+        <span class="hud-bracket">]</span>
+        <span class="brand-name">NIRMAL.DEV</span>
       </a>
 
       <!-- Desktop Links -->
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#about" class="nav-link"><span class="nav-index">01.</span> About</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-index">02.</span> Armory (Skills)</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-index">03.</span> Missions</a></li>
+        <li><a href="#experience" class="nav-link"><span class="nav-index">04.</span> Timeline</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-index">05.</span> Comms</a></li>
       </ul>
 
       <div class="nav-actions">
+        <!-- Interactive Low Ambience Audio Toggle (Web Audio API Synthesizer) -->
+        <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle War Ambience" title="Warzone Ambience Sound">
+          <i data-lucide="volume-x" class="audio-off-icon"></i>
+          <i data-lucide="volume-2" class="audio-on-icon" style="display: none;"></i>
+          <span class="audio-label">Ambience: OFF</span>
+        </button>
+
         <!-- Theme Switcher -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">
           <i data-lucide="sun" class="sun-icon"></i>
           <i data-lucide="moon" class="moon-icon"></i>
         </button>
 
         <!-- CTA Button -->
-        <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
+        <a href="#contact" class="btn btn-war nav-cta">Deploy Comms</a>
 
         <!-- Mobile Menu Toggle Button -->
         <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile menu">
@@ -50,12 +66,12 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobile-drawer">
       <ul class="mobile-nav-links">
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
-        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-        <li><a href="#contact" class="btn btn-primary mobile-cta">Let's Talk</a></li>
+        <li><a href="#about" class="mobile-nav-link">01. About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">02. Armory (Skills)</a></li>
+        <li><a href="#projects" class="mobile-nav-link">03. Missions</a></li>
+        <li><a href="#experience" class="mobile-nav-link">04. Timeline</a></li>
+        <li><a href="#contact" class="mobile-nav-link">05. Comms</a></li>
+        <li><a href="#contact" class="btn btn-war mobile-cta">Deploy Comms</a></li>
       </ul>
     </div>
   </nav>
@@ -64,28 +80,49 @@
   <section class="hero-section" id="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>Available for opportunities & collaborations</span>
+        <!-- Tactical Threat / Status Badge -->
+        <div class="tactical-badge">
+          <span class="blinking-flare"></span>
+          <span class="tactical-code">RADAR ACTIVE // CODING VANGUARD</span>
         </div>
+
         <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Nirmal Adhau</span>
+          WELCOME TO THE <br>
+          <span class="war-glow-text">DIGITAL FRONTLINE</span>
         </h1>
         <h2 class="hero-subtitle">
-          Full-Stack Developer & Software Builder
+          I'm <span class="highlight-name">Nirmal Adhau</span> — Full-Stack Architect & Code Warrior
         </h2>
         <p class="hero-description">
-          I build sleek, fast, and scalable web applications. Passionate about modern architecture, clean code, and leveraging AI tools to build high-impact digital experiences.
+          Forging resilient, battle-tested software amidst the chaos of complex systems. Powered by modern web technologies, VS Code, and cutting-edge AI copilot intelligence.
         </p>
 
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
-            <span>Explore Projects</span>
-            <i data-lucide="arrow-right"></i>
+          <a href="#skills" class="btn btn-war">
+            <i data-lucide="crosshair"></i>
+            <span>Inspect Armory</span>
           </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Get in Touch</span>
+          <a href="#projects" class="btn btn-secondary-war">
+            <i data-lucide="shield-alert"></i>
+            <span>Active Missions</span>
           </a>
+        </div>
+
+        <div class="battle-metrics">
+          <div class="metric-item">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Mission Readiness</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val">99.9%</span>
+            <span class="metric-lbl">System Resilience</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val">AI+VS</span>
+            <span class="metric-lbl">Copilot Armed</span>
+          </div>
         </div>
 
         <div class="social-links">
@@ -95,33 +132,57 @@
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-btn">
             <i data-lucide="linkedin"></i>
           </a>
-          <a href="mailto:contact@example.com" aria-label="Email Me" class="social-btn">
-            <i data-lucide="mail"></i>
+          <a href="mailto:nirmal@example.com" aria-label="Direct Comms" class="social-btn">
+            <i data-lucide="radio"></i>
           </a>
         </div>
       </div>
 
+      <!-- Tactical Holo HUD Visualizer -->
       <div class="hero-visual">
-        <div class="code-card">
-          <div class="code-card-header">
-            <div class="window-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+        <div class="hud-terminal-card" data-tilt>
+          <div class="hud-card-header">
+            <div class="hud-radar-ping">
+              <span class="ping-circle"></span>
+              <span class="ping-text">LIVE TELEMETRY</span>
             </div>
-            <span class="code-file-name">developer.ts</span>
+            <span class="hud-coords">SEC-7 // LAT: 42.109</span>
           </div>
-          <div class="code-card-body">
-            <pre><code><span class="token-keyword">const</span> <span class="token-variable">developer</span> = {
-  <span class="token-property">name</span>: <span class="token-string">"Nirmal Adhau"</span>,
-  <span class="token-property">role</span>: <span class="token-string">"Full-Stack Developer"</span>,
-  <span class="token-property">focus</span>: [<span class="token-string">"Web Apps"</span>, <span class="token-string">"AI Tools"</span>, <span class="token-string">"APIs"</span>],
-  <span class="token-property">passion</span>: <span class="token-string">"Turning ideas into code"</span>,
-  <span class="token-property">coffeeLover</span>: <span class="token-boolean">true</span>
-};
-
-<span class="token-comment">// Always learning & shipping</span>
-<span class="token-function">shipGreatSoftware</span>(developer);</code></pre>
+          <div class="hud-card-body">
+            <div class="hud-command-line">
+              <span class="hud-prompt">vanguard@root:~$</span>
+              <span class="typed-text" id="hud-typewriter"></span><span class="cursor-blink">_</span>
+            </div>
+            <div class="hud-telemetry-grid">
+              <div class="telemetry-block">
+                <span class="telemetry-label">OPERATOR</span>
+                <span class="telemetry-val">NIRMAL ADHAU</span>
+              </div>
+              <div class="telemetry-block">
+                <span class="telemetry-label">THREAT STATUS</span>
+                <span class="telemetry-val status-green">SYSTEM SECURE</span>
+              </div>
+              <div class="telemetry-block">
+                <span class="telemetry-label">DEPLOYMENT</span>
+                <span class="telemetry-val">GITHUB PAGES READY</span>
+              </div>
+              <div class="telemetry-block">
+                <span class="telemetry-label">AI WEAPONRY</span>
+                <span class="telemetry-val status-amber">VS CODE COPILOT ACTIVE</span>
+              </div>
+            </div>
+            <div class="hud-waveform">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -132,172 +193,326 @@
   <section class="section about-section" id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Passionate About Building Exceptional Software</h2>
-        <p class="section-subtitle">A brief glimpse into who I am, my philosophy, and what drives my work.</p>
+        <span class="section-tag"><i data-lucide="target"></i> INTEL BRIEFING</span>
+        <h2 class="section-title">The Engineering Philosophy</h2>
+        <p class="section-subtitle">Forged in high-stakes problem solving, dedicated to unyielding code quality.</p>
       </div>
 
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text-card">
+          <h3><i data-lucide="terminal"></i> Field Report</h3>
           <p>
-            Hello! I'm a developer who enjoys turning complex problems into elegant, maintainable digital products. My journey involves crafting modern front-end interfaces and building reliable backend services.
+            Writing software is an ongoing siege against complexity, tech debt, and failure states. I design scalable web architectures with defensive engineering practices, keeping services bulletproof under heavy loads.
           </p>
           <p>
-            I embrace cutting-edge development environments, pairing powerful IDEs like VS Code with intelligent AI companions to write clean code, debug effectively, and deliver results rapidly.
+            Equipped with modern developer ergonomics—pairing Visual Studio Code with AI copilots, automated Git workflows, and CI/CD pipelines—I transform ambitious blueprints into living, high-speed digital products.
           </p>
 
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <i data-lucide="check-circle-2" class="highlight-icon"></i>
-              <span>Clean, readable, modular code</span>
+          <div class="intel-checkpoints">
+            <div class="intel-item">
+              <i data-lucide="shield-check" class="intel-icon"></i>
+              <span>High-performance architectures with zero bloat</span>
             </div>
-            <div class="highlight-item">
-              <i data-lucide="check-circle-2" class="highlight-icon"></i>
-              <span>Mobile-responsive, accessible UI/UX</span>
+            <div class="intel-item">
+              <i data-lucide="zap" class="intel-icon"></i>
+              <span>AI-accelerated development and precise debugging</span>
             </div>
-            <div class="highlight-item">
-              <i data-lucide="check-circle-2" class="highlight-icon"></i>
-              <span>Version control & Git best practices</span>
+            <div class="intel-item">
+              <i data-lucide="git-branch" class="intel-icon"></i>
+              <span>Strict Git version control & deployment mastery</span>
             </div>
           </div>
         </div>
 
-        <div class="about-stats-grid">
-          <div class="stat-card">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Dedication</span>
+        <div class="about-intel-stats">
+          <div class="intel-stat-box" data-tilt>
+            <i data-lucide="cpu" class="box-icon"></i>
+            <span class="box-num">100%</span>
+            <span class="box-tag">Combat Readiness</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Tech Skills</span>
+          <div class="intel-stat-box" data-tilt>
+            <i data-lucide="layers" class="box-icon"></i>
+            <span class="box-num">Full-Stack</span>
+            <span class="box-tag">Frontend & Backend</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Problem Solver</span>
+          <div class="intel-stat-box" data-tilt>
+            <i data-lucide="flame" class="box-icon"></i>
+            <span class="box-num">24/7</span>
+            <span class="box-tag">Passion & Drive</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">Git</span>
-            <span class="stat-label">Powered Workflow</span>
+          <div class="intel-stat-box" data-tilt>
+            <i data-lucide="git-merge" class="box-icon"></i>
+            <span class="box-num">Git Pages</span>
+            <span class="box-tag">Instant Deployment</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- SKILLS SECTION: Interactive High-Impact Pop-up Animation Armory -->
   <section class="section skills-section" id="skills">
+    <!-- Animated Tactical Radar Sweep Line -->
+    <div class="radar-scanline"></div>
+
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Tech Stack</span>
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-subtitle">Tools and languages I use to bring ideas to life.</p>
+        <span class="section-tag"><i data-lucide="flame"></i> COMBAT ARMORY</span>
+        <h2 class="section-title">Arsenal & Tech Proficiencies</h2>
+        <p class="section-subtitle">Engage the armory. Watch skills ignite as telemetry locks on.</p>
       </div>
 
-      <div class="skills-grid">
-        <!-- Frontend -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <i data-lucide="layout" class="category-icon"></i>
-            <h3>Frontend Development</h3>
+      <div class="skills-armory-grid">
+        <!-- Category 1: Frontend Weapons -->
+        <div class="armory-card" data-tilt>
+          <div class="armory-card-header">
+            <div class="armory-icon-wrap frontend-glow">
+              <i data-lucide="layout"></i>
+            </div>
+            <div>
+              <h3>Frontend Strike Wing</h3>
+              <span class="armory-sub">Visuals, Interfaces & UX</span>
+            </div>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3 / SASS</span>
-            <span class="skill-tag">JavaScript (ES6+)</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Responsive Design</span>
+
+          <div class="armory-skills-list">
+            <!-- Skill Pop Item -->
+            <div class="skill-pop-item" style="--pop-delay: 0.1s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="code-2"></i> HTML5 & CSS3</span>
+                <span class="skill-percent" data-target="98">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="98%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.2s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="file-code"></i> JavaScript (ES6+)</span>
+                <span class="skill-percent" data-target="95">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.3s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="atom"></i> React.js</span>
+                <span class="skill-percent" data-target="90">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.4s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="smartphone"></i> Responsive & Mobile Design</span>
+                <span class="skill-percent" data-target="96">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="96%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-badges-container">
+            <span class="armory-badge pop-badge">TailwindCSS</span>
+            <span class="armory-badge pop-badge">DOM Manipulation</span>
+            <span class="armory-badge pop-badge">Web Animations</span>
+            <span class="armory-badge pop-badge">Canvas API</span>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <i data-lucide="server" class="category-icon"></i>
-            <h3>Backend & APIs</h3>
+        <!-- Category 2: Backend Artillery -->
+        <div class="armory-card" data-tilt>
+          <div class="armory-card-header">
+            <div class="armory-icon-wrap backend-glow">
+              <i data-lucide="server"></i>
+            </div>
+            <div>
+              <h3>Backend Heavy Artillery</h3>
+              <span class="armory-sub">Logic, Servers & Databases</span>
+            </div>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">PostgreSQL / SQL</span>
-            <span class="skill-tag">MongoDB</span>
+
+          <div class="armory-skills-list">
+            <div class="skill-pop-item" style="--pop-delay: 0.15s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="cpu"></i> Node.js & Express</span>
+                <span class="skill-percent" data-target="92">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="92%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.25s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="terminal"></i> Python Systems</span>
+                <span class="skill-percent" data-target="88">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="88%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.35s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="database"></i> PostgreSQL & MongoDB</span>
+                <span class="skill-percent" data-target="86">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="86%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.45s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="globe"></i> RESTful & GraphQL APIs</span>
+                <span class="skill-percent" data-target="94">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-badges-container">
+            <span class="armory-badge pop-badge">JWT Auth</span>
+            <span class="armory-badge pop-badge">CRUD Architecture</span>
+            <span class="armory-badge pop-badge">Microservices</span>
+            <span class="armory-badge pop-badge">WebSockets</span>
           </div>
         </div>
 
-        <!-- Tools & Workflow -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <i data-lucide="cpu" class="category-icon"></i>
-            <h3>Tools & AI Workflow</h3>
+        <!-- Category 3: Tactical AI & Tools -->
+        <div class="armory-card" data-tilt>
+          <div class="armory-card-header">
+            <div class="armory-icon-wrap tools-glow">
+              <i data-lucide="crosshair"></i>
+            </div>
+            <div>
+              <h3>AI Recon & Battle Tools</h3>
+              <span class="armory-sub">IDEs, Version Control & Automations</span>
+            </div>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">GitHub Copilot</span>
-            <span class="skill-tag">ChatGPT / AI Tools</span>
-            <span class="skill-tag">Terminal & Bash</span>
-            <span class="skill-tag">GitHub Pages</span>
+
+          <div class="armory-skills-list">
+            <div class="skill-pop-item" style="--pop-delay: 0.2s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="git-branch"></i> Git & GitHub Deployment</span>
+                <span class="skill-percent" data-target="96">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="96%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.3s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="code"></i> VS Code Ergonomics</span>
+                <span class="skill-percent" data-target="95">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.4s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="sparkles"></i> GitHub Copilot & ChatGPT AI</span>
+                <span class="skill-percent" data-target="98">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="98%"></div>
+              </div>
+            </div>
+
+            <div class="skill-pop-item" style="--pop-delay: 0.5s;">
+              <div class="skill-meta">
+                <span class="skill-name"><i data-lucide="terminal"></i> Command Line & ZSH</span>
+                <span class="skill-percent" data-target="90">0%</span>
+              </div>
+              <div class="skill-meter-track">
+                <div class="skill-meter-fill" data-progress="90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-badges-container">
+            <span class="armory-badge pop-badge">Live Server</span>
+            <span class="armory-badge pop-badge">GitHub Pages</span>
+            <span class="armory-badge pop-badge">Continue.dev</span>
+            <span class="armory-badge pop-badge">Prettier</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects / Active Missions Section -->
   <section class="section projects-section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">My Work</span>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Some of the projects I've built and contributed to.</p>
+        <span class="section-tag"><i data-lucide="shield"></i> DEPLOYED MISSIONS</span>
+        <h2 class="section-title">Combat Operations & Projects</h2>
+        <p class="section-subtitle">Tactical software solutions deployed in production.</p>
       </div>
 
-      <!-- Project Filters -->
+      <!-- Tactical Filters -->
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn active" data-filter="all"><i data-lucide="crosshair"></i> All Operations</button>
         <button class="filter-btn" data-filter="fullstack">Full Stack</button>
         <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="tools">Tools & APIs</button>
+        <button class="filter-btn" data-filter="tools">AI & Tools</button>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card" data-category="frontend">
+        <div class="project-card" data-category="frontend" data-tilt>
+          <div class="mission-header-bar">
+            <span class="mission-code">OP-01 // VANGUARD</span>
+            <span class="mission-badge status-live">ONLINE</span>
+          </div>
           <div class="project-thumbnail">
-            <div class="project-badge">Featured</div>
-            <div class="thumbnail-placeholder">
-              <i data-lucide="code" class="placeholder-icon"></i>
+            <div class="thumbnail-holo-icon">
+              <i data-lucide="flame"></i>
             </div>
           </div>
           <div class="project-content">
             <div class="project-tags">
               <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
+              <span>Canvas 2D</span>
+              <span>Web Audio</span>
               <span>GitHub Pages</span>
             </div>
-            <h3 class="project-title">Developer Portfolio Website</h3>
+            <h3 class="project-title">Warzone Developer Portfolio</h3>
             <p class="project-desc">
-              A high-performance, responsive personal portfolio with dark/light mode toggle, dynamic projects filtering, and GitHub Pages hosting.
+              Atmospheric developer portfolio with animated warzone embers, laser tracer physics, Web Audio synthesizer ambience, and interactive 3D skill pop-ups.
             </p>
             <div class="project-links">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i data-lucide="github"></i> Code
+                <i data-lucide="github"></i> Repository
               </a>
-              <a href="#" class="project-link primary">
-                <i data-lucide="external-link"></i> Live Demo
+              <a href="#hero" class="project-link primary">
+                <i data-lucide="radio"></i> Active Deploy
               </a>
             </div>
           </div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card" data-category="fullstack">
+        <div class="project-card" data-category="fullstack" data-tilt>
+          <div class="mission-header-bar">
+            <span class="mission-code">OP-02 // SENTINEL</span>
+            <span class="mission-badge">SECURE</span>
+          </div>
           <div class="project-thumbnail">
-            <div class="thumbnail-placeholder">
-              <i data-lucide="layers" class="placeholder-icon"></i>
+            <div class="thumbnail-holo-icon">
+              <i data-lucide="shield-check"></i>
             </div>
           </div>
           <div class="project-content">
@@ -305,46 +520,51 @@
               <span>Node.js</span>
               <span>Express</span>
               <span>MongoDB</span>
-              <span>REST API</span>
+              <span>JWT Auth</span>
             </div>
-            <h3 class="project-title">Task & Project Management API</h3>
+            <h3 class="project-title">Fortress Task & Auth Engine</h3>
             <p class="project-desc">
-              Robust RESTful backend service with JWT authentication, role-based access control, and complete CRUD endpoints for project coordination.
+              Enterprise REST API architecture with military-grade JWT authorization, cryptographic password hashing, role-based access control, and telemetry tracking.
             </p>
             <div class="project-links">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i data-lucide="github"></i> Code
+                <i data-lucide="github"></i> Repository
               </a>
               <a href="#" class="project-link primary">
-                <i data-lucide="external-link"></i> Docs
+                <i data-lucide="external-link"></i> Intel Docs
               </a>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card" data-category="tools">
+        <div class="project-card" data-category="tools" data-tilt>
+          <div class="mission-header-bar">
+            <span class="mission-code">OP-03 // CYBERNET</span>
+            <span class="mission-badge">ARMED</span>
+          </div>
           <div class="project-thumbnail">
-            <div class="thumbnail-placeholder">
-              <i data-lucide="bot" class="placeholder-icon"></i>
+            <div class="thumbnail-holo-icon">
+              <i data-lucide="bot"></i>
             </div>
           </div>
           <div class="project-content">
             <div class="project-tags">
               <span>Python</span>
               <span>OpenAI API</span>
+              <span>VS Code</span>
               <span>CLI</span>
             </div>
-            <h3 class="project-title">AI Terminal Assistant</h3>
+            <h3 class="project-title">AI Tactical Copilot CLI</h3>
             <p class="project-desc">
-              Command-line productivity tool that assists developers with Git commands, shell scripts, and automated code review directly from the terminal.
+              Command-line developer companion that diagnoses git merge conflicts, auto-generates git commits, and analyzes pull requests right from your shell.
             </p>
             <div class="project-links">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link">
-                <i data-lucide="github"></i> Code
+                <i data-lucide="github"></i> Repository
               </a>
               <a href="#" class="project-link primary">
-                <i data-lucide="external-link"></i> Demo
+                <i data-lucide="external-link"></i> Intel Docs
               </a>
             </div>
           </div>
@@ -353,36 +573,36 @@
     </div>
   </section>
 
-  <!-- Experience / Timeline Section -->
+  <!-- Timeline Section -->
   <section class="section experience-section" id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Milestones</span>
-        <h2 class="section-title">Experience & Journey</h2>
-        <p class="section-subtitle">My path as a continuous learner and developer.</p>
+        <span class="section-tag"><i data-lucide="compass"></i> CHRONOLOGY</span>
+        <h2 class="section-title">Battle Records & Experience</h2>
+        <p class="section-subtitle">Milestones passed on the journey to mastery.</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2024 - Present</span>
-            <h3 class="timeline-title">Software Developer</h3>
-            <h4 class="timeline-subtitle">Independent Projects & Open Source</h4>
+          <div class="timeline-card" data-tilt>
+            <span class="timeline-date">2024 - PRESENT</span>
+            <h3 class="timeline-title">Software Developer & Open Source Vanguard</h3>
+            <h4 class="timeline-subtitle">Independent Systems & High-Impact Web Apps</h4>
             <p class="timeline-desc">
-              Designing full-stack applications, utilizing modern web standards, and integrating AI-accelerated workflows with VS Code and GitHub.
+              Pioneering modern full-stack workflows pairing Visual Studio Code with AI Copilots. Architecting responsive web applications with automated Git deployment.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-card">
+          <div class="timeline-card" data-tilt>
             <span class="timeline-date">2022 - 2024</span>
-            <h3 class="timeline-title">Computer Science & Development Studies</h3>
-            <h4 class="timeline-subtitle">Foundations & Systems</h4>
+            <h3 class="timeline-title">Computer Science & Engineering Foundations</h3>
+            <h4 class="timeline-subtitle">Algorithms, Data Structures & Systems</h4>
             <p class="timeline-desc">
-              Deep-dived into data structures, algorithms, databases, web development, and software engineering methodologies.
+              Mastered foundational software engineering, relational databases, network communication protocols, and modern web application development.
             </p>
           </div>
         </div>
@@ -394,16 +614,16 @@
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Connect</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Have a project in mind, a question, or just want to say hi? Send me a message!</p>
+        <span class="section-tag"><i data-lucide="radio"></i> TRANSMISSION</span>
+        <h2 class="section-title">Open Encrypted Comms</h2>
+        <p class="section-subtitle">Ready to recruit or collaborate on a high-stakes mission? Transmit your signal.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Let's build something amazing together</h3>
+          <h3>Establish Direct Communication</h3>
           <p>
-            I'm always open to discussing new opportunities, creative ideas, or questions about software development.
+            Whether you have an upcoming project, a challenging engineering problem, or want to discuss full-stack software development, my transmission lines are open.
           </p>
 
           <div class="contact-methods">
@@ -412,7 +632,7 @@
                 <i data-lucide="mail"></i>
               </div>
               <div>
-                <span class="contact-item-title">Email</span>
+                <span class="contact-item-title">Encrypted Email</span>
                 <a href="mailto:nirmal@example.com" class="contact-item-link">nirmal@example.com</a>
               </div>
             </div>
@@ -422,7 +642,7 @@
                 <i data-lucide="github"></i>
               </div>
               <div>
-                <span class="contact-item-title">GitHub</span>
+                <span class="contact-item-title">GitHub Vanguard</span>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item-link">github.com/nirmal</a>
               </div>
             </div>
@@ -432,32 +652,37 @@
                 <i data-lucide="map-pin"></i>
               </div>
               <div>
-                <span class="contact-item-title">Location</span>
-                <span class="contact-item-link">Open to Remote / Worldwide</span>
+                <span class="contact-item-title">Coordinates</span>
+                <span class="contact-item-link">Available Remote / Worldwide</span>
               </div>
             </div>
           </div>
         </div>
 
         <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="e.g. John Doe">
+          <div class="form-header-badge">
+            <span class="form-dot"></span>
+            <span>SECURE CHANNEL ENCRYPTED</span>
           </div>
 
           <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required placeholder="john@example.com">
+            <label for="name">Operator Name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Commander Sarah Connor">
           </div>
 
           <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Hi Nirmal, I'd like to talk about..."></textarea>
+            <label for="email">Comms Frequency (Email)</label>
+            <input type="email" id="email" name="email" required placeholder="sarah@resistance.org">
           </div>
 
-          <button type="submit" class="btn btn-primary form-submit-btn">
-            <span>Send Message</span>
+          <div class="form-group">
+            <label for="message">Transmission Brief</label>
+            <textarea id="message" name="message" rows="5" required placeholder="State your mission objective or project details..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-war form-submit-btn">
             <i data-lucide="send"></i>
+            <span>Transmit Message</span>
           </button>
           <div class="form-status" id="form-status"></div>
         </form>
@@ -469,12 +694,12 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <p>© <span id="current-year"></span> Nirmal Adhau. Built with HTML, CSS, & JS. Hosted on GitHub Pages.</p>
+        <p>© <span id="current-year"></span> Nirmal Adhau // Built with HTML5, Canvas & Web Audio // Deployed on GitHub Pages</p>
       </div>
       <div class="footer-right">
-        <a href="#hero" class="back-to-top" aria-label="Back to top">
-          <span>Back to top</span>
-          <i data-lucide="arrow-up"></i>
+        <a href="#hero" class="back-to-top" aria-label="Return to Summit">
+          <span>Return to Summit</span>
+          <i data-lucide="chevron-up"></i>
         </a>
       </div>
     </div>
@@ -482,7 +707,6 @@
 
   <script src="script.js"></script>
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
   </script>
 </body>
