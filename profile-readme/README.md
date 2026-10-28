@@ -19,7 +19,7 @@
 - 💻 **Building:** Modern web apps & tools with clean architecture.
 - ⚡ **Tech Stack:** JavaScript, TypeScript, Python, Node.js, React, Git, SQL.
 - 🤖 **AI Workflow:** Pairing VS Code with AI assistants (GitHub Copilot & ChatGPT) to accelerate shipping.
-- 🌐 **Portfolio Website:** [Explore my live portfolio](https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>/)
+- 🌐 **Portfolio Website:** [Explore my live portfolio](https://nirmaladhau.github.io/developer-portfolio/)
 
 ---
 
@@ -34,11 +34,11 @@
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=<YOUR_GITHUB_USERNAME>&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=nirmaladhau&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=<YOUR_GITHUB_USERNAME>&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nirmaladhau&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
   <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=<YOUR_GITHUB_USERNAME>&theme=radical&hide_border=true" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=nirmaladhau&theme=radical&hide_border=true" alt="GitHub Streak" />
 </div>
 
 ---

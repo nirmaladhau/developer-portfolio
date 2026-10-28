@@ -69,9 +69,9 @@ git init
 git add .
 git commit -m "feat: initial developer portfolio and AI setup"
 
-# Link to your new GitHub repository (replace with your GitHub URL)
+# Link to your new GitHub repository
 git branch -M main
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
+git remote add origin https://github.com/nirmaladhau/developer-portfolio.git
 
 # Push to GitHub!
 git push -u origin main
@@ -83,4 +83,4 @@ git push -u origin main
 3. Under **Branch**, select `main` and `/ (root)`.
 4. Click **Save**.
 5. Within 1 minute, your portfolio will be live at:
-   `https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>/` 🎉
+   `https://nirmaladhau.github.io/developer-portfolio/` 🎉
