@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/nirmaladhau"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:contact@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:nirmaladhau@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 </div>
@@ -16,8 +16,10 @@
 
 ### 🚀 About Me
 
+- 📍 **Base Coordinates:** Lohegaon, Pune, Maharashtra
 - 💻 **Building:** Modern web apps & tools with clean architecture.
-- ⚡ **Tech Stack:** JavaScript, TypeScript, Python, Node.js, React, Git, SQL.
+- ⚡ **Evolving Weapons:** Python (Learning: 20%), C++, Competitive Programming, DSA & AI/ML.
+- 🛠️ **Core Armory:** Linux (80%), GitHub (60%), JavaScript, React, Node.js, Express, SQL.
 - 🤖 **AI Workflow:** Pairing VS Code with AI assistants (GitHub Copilot & ChatGPT) to accelerate shipping.
 - 🌐 **Portfolio Website:** [Explore my live portfolio](https://nirmaladhau.github.io/developer-portfolio/)
 
