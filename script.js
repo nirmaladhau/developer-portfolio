@@ -725,7 +725,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       ctx.save();
-      ctx.fillStyle = '#060910';
+      ctx.fillStyle = 'rgba(6, 9, 16, 0.42)';
       ctx.beginPath();
       ctx.moveTo(0, height);
       ctx.lineTo(0, horizonPoints[0]?.y || baseY);
